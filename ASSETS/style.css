@@ -1,0 +1,463 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-size:95%;
+}
+:root{
+    --bg-btn:#e7015e;
+    --bg-hover:rgba(0,0,0,0.5);
+    --text:#f2f2f2;
+    --textd:#aaaaaa;
+    --black: #050505;
+    --itemcolor: #121158;
+    --pcolor:#888888;
+}
+
+body{
+    font-family: 'Poppins',sans-serif;
+    line-height: 1.5;
+}
+.top{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    background: var(--bg-btn);
+    padding: 8px 10px;
+    border-radius: 3px;
+    opacity: .6;
+    color: var(--text);
+    transition: .3s ease;
+    z-index: 90;
+}
+.top:hover{
+    z-index: 90;
+    opacity: 1;
+    box-shadow:0 0 10px var(--bg-btn);
+}
+li,ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 3px;
+    background: var(--bg-btn);
+    color: #fff;
+    transition: background .4s ease;
+}
+.btn:hover{
+    background: #010101;
+}
+section{
+    padding: 100px 0;
+}
+.grid{
+    display: grid;
+    grid-gap: 20px;
+}
+.grid-2{
+    grid-template-columns: repeat(2,1fr);
+}
+.grid-3{
+    grid-template-columns: repeat(3,1fr);
+}
+.grid-4{
+    grid-template-columns: repeat(4,1fr);
+}
+.title{
+    text-align: center;
+}
+.title h2{
+    font-size: 1.82em;
+    margin-bottom: .7em;
+    color: var(--black);
+}
+.title p{
+    color: var(--pcolor);
+    margin-bottom: 2rem;
+}
+/*header*/
+header{
+    position: absolute;
+    width: 100%;
+    padding: 30px 0;
+    z-index: 1000;
+}
+nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    display: flex;
+    font-size: 2em;
+    color: var(--text);
+}
+.logo img{
+    width: 50px;
+}
+.menu {
+    display: flex;
+}
+.menu a{
+    position: relative;
+    margin: 0 15px;
+    font-size: 1.2em;
+    color: var(--text);
+    transition: color .4s ease;
+}
+.menu a:hover{
+    color: var(--bg-btn);
+}
+main{
+    position: relative;
+    z-index: 990;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("https://www.widener.edu/sites/default/files/2020-03/Coronavirus_Graphic_Page_1200x750.png");
+    background-position: center center;
+    background-size: cover;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.content h1{
+    color: #fff;
+    font-size: 2.5em;
+}
+.content p{
+    color: var(--pcolor);
+    margin: 20px;
+    max-width: 800px;
+}
+/*cases*/
+.case{
+    background:url("https://1.bp.blogspot.com/-cFauqboXBxI/Xs5py6OjWwI/AAAAAAAAIfk/obIWFMT_m4UI6Mx7hJF-rKaTZfXXIxYdACNcBGAsYHQ/s1600/counter-back.png"),var(--black);
+    background-size: cover;
+    background-position: center;
+}
+.card{
+    background: var(--text);
+    border-radius: 15px;
+    padding: 15px 50px;
+    color: #000;
+}
+.case-text{
+    text-align: center;
+    padding: 1.4rem;
+    color: #0a0a0a;
+}
+.case-text span{
+    background: #000;
+    color: #fff;
+    padding: 5px;
+}
+.item{
+    text-align: center;
+    margin: 10px 0;
+}
+.item h1{
+    font-size: 2.3em;
+}
+.item p{
+    color:  var(--pcolor);
+    margin: 1rem;
+}
+
+
+/*info section*/
+
+.info .content h1{
+    color: #000;
+}
+.product{
+    padding-top:4rem;
+}
+.product .grid > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.product .grid > div img{
+    width: 100px;
+    background: rgb(221, 215, 215);
+    margin-right: 5px;
+    border-radius: 50%;
+    border: 2px solid crimson;
+}
+.product .grid > div p{
+    max-width: 80%;
+    margin: auto;
+    color: var(--itemcolor);
+}
+/*symtoms*/
+.box-item{
+    text-align: center;
+}
+.box-item img{
+    width: 160px;
+    margin-bottom: 3em;
+}
+.box-item h3{
+    font-size: 1.4rem;
+}
+.box-item p{
+    color: var(--itemcolor);
+    font-weight: 400;
+    text-align: center;
+    max-width: 80%;
+    margin:10px auto;
+}
+/*blog*/
+.blog .grid{
+    margin-top: 3rem;
+    gap: 50px;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+article .img-box{
+    height: 200px;
+}
+article .img-box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+article h3{
+    margin: 2rem 0;
+    font-weight: 300;
+    color: var(--black);
+    font-weight: 600;
+}
+article p{
+    margin-bottom: 20px;
+    text-align: justify;
+    color: #747171;
+}
+.blog .button{
+    text-align: center;
+}
+
+/*wash*/
+.item img{
+    width: 110px;
+}
+.item p{
+    color: var(--itemcolor);
+    font-size: 1.3rem;    
+    font-weight: 700;
+    margin: 0 0 7px 0;
+}
+/*footer*/
+footer {
+    background: url("https://static.vecteezy.com/system/resources/previews/000/962/895/non_2x/abstract-coronavirus-background-vector.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0 30px 0;
+    color: var(--text);
+}
+footer h3{
+    font-size: 25px;
+    margin-bottom: 1em;
+}
+footer .item-one p{
+    color: var(--textd);
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.col{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+input{
+    padding: 9px 10px;
+    width: 49%;
+    background: transparent;
+    outline: none;
+    background: rgba(0,0,0,.1);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    color: var(--text);
+}
+textarea{
+    color: var(--text);
+    border: 1px solid #fff;
+    border-radius: 3px;
+    outline: none;
+    font-family: sans-serif;
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0;
+    resize: none;
+    background: rgba(0,0,0,.1);
+}
+button{
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: none;
+}
+
+.contact-list li{
+    line-height: 2.5;
+    font-size: 1.1rem;
+}
+.contact-list li i{
+    color: var(--bg-btn);
+}
+.footer-bottom{
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.footer-bottom h1{
+    font-size: 2.2em;
+    margin: 1.2rem 0;
+}
+.footer-bottom input{
+   width: 100%;
+   max-width: 600px;
+   padding: 15px;
+   outline: none;
+   border:none;
+   border-radius: 50px;
+   background: var(--text);
+   text-align: center;
+   color: var(--black);
+}
+.footer-bottom input[type="submit"]{
+    width: 40%;
+    margin:1em 0 3em 0;
+    background: var(--bg-btn);
+    color: var(--wht);
+}
+.footer-bottom input[type="submit"]:hover{
+    background: #000;
+}
+.footer-bottom .social i{
+    height: 30px;
+    width: 30px;
+    margin: 12px 6px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    font-size: 1em;
+}
+.footer-bottom .social i:hover{
+    background: var(--bg-btn);
+}
+.bar{
+    display: none;
+    cursor: pointer;
+    color: #000000;
+    font-size: 2em;
+}
+/*animation*/
+.right{
+    animation: right 2s ease ;
+}
+@keyframes right{
+    0%{
+        position: relative;
+        right: 1000px;
+    }
+    100%{
+        position: relative;
+        right: 0;
+    }
+}
+
+.up{
+    animation: up 2s ease;
+}
+@keyframes up{
+    0%{
+        position: relative;
+        top: 1000px;
+    }
+    100%{
+        position: relative;
+        top: 0;
+    }
+}
+
+
+.left{
+    animation: left 2s ease ;
+}
+@keyframes left{
+    0%{
+        position: relative;
+        left: 1000px;
+    }
+    100%{
+        position: relative;
+        left: 0;
+    }
+}
+/*media querys*/
+@media (max-width:600px){
+    header{
+        position: fixed;
+        padding: 10px 0;
+        background: #ffffff;
+    }
+    header nav .menu{
+        display: none;
+    }
+    .logo{
+        color: #000;
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+    .logo img{
+        width: 35px;
+    }
+    header nav .bar{
+        display: block;
+    }
+    .container{
+        padding: 0 30px;
+    }
+    .grid-2{
+        grid-template-columns: 1fr;
+    }
+    .grid-3{
+        grid-template-columns: 1fr;
+    }
+    .grid-4{
+        grid-template-columns: 1fr;
+    }
+
+}
